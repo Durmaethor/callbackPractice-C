@@ -128,8 +128,11 @@ uniq(names, function(uniqArr){
 
 function each(names, callback) {
   
-
-
+  for ( var i = 0; i < names.length; i++){
+    var indice = names[i];
+    var item = i;
+    callback(indice, item);
+  }
 }
 
 each(names, function(item, indice){
