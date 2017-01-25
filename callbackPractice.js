@@ -104,7 +104,14 @@ contains(names, 'Colt', function(result){
 
 
 function uniq(names, callback) {
+  var uniqArr = [];
 
+  for ( i = 0; i < names.length; i++) {
+    if(uniqArr.indexOf(names[i]) === -1) {
+      uniqArr.push(names[i]);
+    }
+  }
+  return callback(uniqArr);
 }
 
 uniq(names, function(uniqArr){
