@@ -104,14 +104,14 @@ contains(names, 'Colt', function(result){
 
 
 function uniq(names, callback) {
-  var uniqArr = [];
+  var uniqArr = [];               //creates the array uniqArr
 
-  for ( i = 0; i < names.length; i++) {
-    if(uniqArr.indexOf(names[i]) === -1) {
-      uniqArr.push(names[i]);
+  for ( i = 0; i < names.length; i++) {    //loops through the names array
+    if(uniqArr.indexOf(names[i]) === -1) {  // if the value of the items in the array do not match a value in uniqArr
+      uniqArr.push(names[i]);               //push that item to the new array, uniqArr
     }
   }
-  return callback(uniqArr);
+  return callback(uniqArr);                 //then return uniqArr filled to be called from uniq
 }
 
 uniq(names, function(uniqArr){
