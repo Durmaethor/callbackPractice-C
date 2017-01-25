@@ -23,11 +23,12 @@ and what you should write is the sayHi function that makes the code above work,
 */
 
 
-
-  //Code Here for first
+function first(names, callback) {
+  callback(names.shift());
+}
   
-
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
+
 first(names, function(firstName){
   console.log('The first name in names is ' + firstName)
 });
@@ -39,7 +40,9 @@ first(names, function(firstName){
 
 
 
-  //Code Here for last
+function last(names, callback) {
+  callback(names.pop());
+}
 
 last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
@@ -55,8 +58,9 @@ last(names, function(lastName){
 
 
 
-
-  //Code Here for multiply
+function multiply(num1, num2, callback) {
+  callback(num1 * num2);
+}
 
 multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
@@ -72,7 +76,9 @@ multiply(4, 3, function(answer){
 
 
 
-  //Code Here for contains
+function contains(names, str, callback){
+    callback();
+}
 
 contains(names, 'Colt', function(result){
   if(result === true){
