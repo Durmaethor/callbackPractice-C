@@ -76,8 +76,15 @@ multiply(4, 3, function(answer){
 
 
 
-function contains(names, str, callback){
-    callback();
+function contains(array, name, callback){
+  var result = false;
+
+  for( i = 0; i < array.length; i++){
+    if(array[i] === name) {
+      result = true;
+    }
+  }
+  callback(result);
 }
 
 contains(names, 'Colt', function(result){
@@ -96,8 +103,9 @@ contains(names, 'Colt', function(result){
 
 
 
+function uniq(names, callback) {
 
-    //Code Here for uniq
+}
 
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
