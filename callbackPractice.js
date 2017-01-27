@@ -149,7 +149,16 @@ each(names, function(item, indice){
 
 
 
- //code here for getUserById
+function getUserById(users, user, callback) {
+  var person = {};
+
+  for (var i = 0; i < users.length; i++){
+    if (users[i].id === user) {
+      person = users[i];
+    }
+  }
+  return callback(person);
+}
 
 var users = [
   {
